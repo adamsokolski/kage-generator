@@ -1,5 +1,6 @@
 const paragraph = document.querySelector(".main-box > .kage-text");
 const button = document.querySelector(".main-box > .random-button");
+const list = document.querySelector(".main-box > .kage-list");
 
 function getKrysianRym() {
   var xhttp = new XMLHttpRequest();
@@ -7,11 +8,21 @@ function getKrysianRym() {
     if (this.readyState == 4 && this.status == 200) {
       // Typical action to be performed when the document is ready:
       let response = JSON.parse(xhttp.responseText);
-      let resNum = Math.floor(Math.random() * response.length) + 1;
-      let rymText = response[resNum];
-      rymText = rymText.charAt(0).toUpperCase() + rymText.slice(1);
-      paragraph.innerText = `Krystian ${rymText}`;
-      document.createTextNode(`Krystian ${rymText}`);
+      let randomIndexNumber = Math.floor(Math.random() * response.length) + 1;
+      let oneOrTwo = Math.floor(Math.random() * 2) + 1;
+      if (oneOrTwo === 1) {
+        let resNum = Math.floor(Math.random() * response.krystian.length) + 1;
+        let rymText = response.krystian[resNum];
+        rymText = rymText.charAt(0).toUpperCase() + rymText.slice(1);
+        paragraph.innerText = `Krystian ${rymText}`;
+        list.innerHTML += `Krystian ${rymText},   `;
+      } else {
+        let resNum = Math.floor(Math.random() * response.krystek.length) + 1;
+        let rymText = response.krystek[resNum];
+        rymText = rymText.charAt(0).toUpperCase() + rymText.slice(1);
+        paragraph.innerText = `Krystek ${rymText}`;
+        list.innerHTML += `Krystek ${rymText},   `;
+      }
     }
   };
   xhttp.open("GET", "krystian.json", true);

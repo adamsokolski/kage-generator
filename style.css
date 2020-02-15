@@ -20,7 +20,6 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  height: 100vh;
 }
 
 .random-button {
@@ -50,6 +49,11 @@ body {
 .kage-text {
   font-size: 25px;
   padding: 25px;
+}
+
+.kage-list {
+  padding: 20px;
+  word-spacing: 5px;
 }
 
 .header {
