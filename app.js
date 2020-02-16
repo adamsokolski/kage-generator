@@ -1,6 +1,7 @@
 const paragraph = document.querySelector(".main-box > .kage-text");
 const button = document.querySelector(".main-box > .random-button");
 const list = document.querySelector(".main-box > .kage-list");
+const number = document.querySelector(".main-box > .number-input");
 
 function getKrysianRym() {
   var xhttp = new XMLHttpRequest();
@@ -30,7 +31,9 @@ function getKrysianRym() {
 }
 
 button.addEventListener("click", function() {
-  getKrysianRym();
+  for (let i = 0; i < number.value; i++) {
+    getKrysianRym();
+  }
 });
 
 /*
