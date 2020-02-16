@@ -31,8 +31,12 @@ function getKrysianRym() {
 }
 
 button.addEventListener("click", function() {
-  for (let i = 0; i < number.value; i++) {
-    getKrysianRym();
+  if (number.value <= 1000) {
+    for (let i = 0; i < number.value; i++) {
+      getKrysianRym();
+    }
+  } else {
+    paragraph.innerText = `Podaj liczbę poniżej 1000, bo ci komputer wybuchnie`;
   }
 });
 
