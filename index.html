@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/a1d0b5401b.js"
+      crossorigin="anonymous"
+    ></script>
     <script type="application/json" src="./krystian.json" async></script>
     <script type="text/javascript" src="./app.js" async></script>
 
@@ -12,10 +16,20 @@
   <body>
     <header class="header">
       <h1 class="header-title">Krystiano Ronaldo Generator</h1>
+      <a href="https://github.com/idKrazu/kage-generator" target="_blank">
+        <i class="fab fa-github" style="font-size: 30px"></i
+      ></a>
     </header>
     <div class="main-box">
       <p class="kage-text">Krystian</p>
-      <input type="number" class="number-input" /><button class="random-button">
+      <input
+        type="number"
+        class="number-input"
+        placeholder="1 - 1000"
+        min="1"
+        max="1000"
+      />
+      <button class="random-button">
         losuj
       </button>
       <p class="kage-list"></p>

@@ -22,6 +22,26 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.number-input {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 6px;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 200px;
+}
+
 .random-button {
   background: transparent;
   border: 2px solid white;
@@ -39,6 +59,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+  width: 200px;
 }
 
 .random-button:hover {
@@ -58,8 +79,37 @@ body {
 
 .header {
   background-color: rgb(42, 42, 42);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.header a:hover {
+  transition: 0.3s;
+  color: rgb(160, 160, 160);
+}
+.header a:active {
+  transition: 0.3s;
+  color: rgb(145, 212, 128);
 }
 
 .header-title {
   padding: 5px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
